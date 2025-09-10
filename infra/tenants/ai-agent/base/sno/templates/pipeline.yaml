@@ -9,16 +9,16 @@ spec:
   - default: ai-agent
     name: APP_NAME
     type: string
-  - default: image-registry.openshift-image-registry.svc:5000/ai-agent/ai-agent 
+  - default: image-registry.openshift-image-registry.svc:5000/ai-agent/ai-agent
     name: IMAGE_NAME
     type: string
-  - default: https://github.com/redhat-ai-services/etx-agentic-ai.git
+  - default: https://github.com/stefan-bergstein/etx-agentic-ai.git
     name: GIT_REPO
     type: string
-  - default: main 
+  - default: main
     name: GIT_REVISION
     type: string
-  - default: code 
+  - default: code
     name: PATH_CONTEXT
     type: string
   tasks:
@@ -91,7 +91,7 @@ spec:
     taskSpec:
       params:
       - name: aggregateTaskStatus
-      steps: 
+      steps:
       - name: check-task-status
         image: registry.redhat.io/openshift4/ose-cli:latest
         script: |
